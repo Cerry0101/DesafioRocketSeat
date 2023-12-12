@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #00000000;
+    text-align: center;
+    padding-bottom: 20px;
+    background-size: cover;
+}
+
+#profile-container {
+    margin-top: 50px;
+}
+
+
+
+#profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#profile-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#social-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-button {
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    width: 150px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+#footer p {
+    color: #fff; 
+    margin: 0; 
+}
+
+/* checkbox invisível */
+#theme-switch {
+    display: none;
+}
+
+/* (o visual do botão de alternância) */
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-size: 100% 100%; 
+}
+
+/* Aparência padrão do slider */
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    background-image: url('assets/moon-stars.svg'); 
+    background-size: 100% 100%;
+    transition: 0.4s;
+}
+
+/* (ativo) */
+#theme-switch:checked + .slider:before {
+    transform: translateX(26px);
+    background-image: url('assets/sun.svg'); 
+}
+
+/* slider redondo */
+.slider.round {
+    border-radius: 34px;
+}
+
+/* slider quando é redondo */
+.slider.round:before {
+    border-radius: 50%;
+}

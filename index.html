@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelle Lima</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body id="theme-switch-container">
+    <div id="profile-container">
+        <img id="profile-image" src="assets/eu.jpeg" alt="Minha Foto">
+        <div id="profile-name">Marcelle Lima</div>
+    </div>
+
+    <div id="social-buttons">
+        <a class="social-button" href="https://github.com" target="_blank">GitHub</a>
+        <a class="social-button" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a class="social-button" href="https://instagram.com" target="_blank">Instagram</a>
+        <a class="social-button" href="whatsapp://send?phone=+55091989335752" target="_blank">WhatsApp</a>
+    </div>
+
+    <!-- Adicione essa seção para o switch -->
+    <div id="theme-switch-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider round"></span>
+        </label>
+    </div>    
+
+    <div id="footer">
+        <p>Obrigada, até a próxima</p>
+    </div>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        const body = document.body;
+
+        // Defina o background inicial
+        body.style.background = "url('assets/bg-desktop.jpg') no-repeat center center fixed";
+        body.style.backgroundSize = "cover";
+
+        // Adicione o evento de mudança ao themeSwitch
+        themeSwitch.addEventListener('change', () => {
+            // Alterne o background e a imagem da rodinha do botão
+            if (themeSwitch.checked) {
+                body.style.background = "url('assets/bg-desktop-light.jpg') no-repeat center center fixed";
+            } else {
+                body.style.background = "url('assets/bg-desktop.jpg') no-repeat center center fixed";
+            }
+
+            // Atualize as propriedades background-size para cobrir toda a tela
+            body.style.backgroundSize = "cover";
+        });
+    </script>
+    
+
+</body>
+</html>

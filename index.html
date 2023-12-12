@@ -14,13 +14,12 @@
     </div>
 
     <div id="social-buttons">
-        <a class="social-button" href="https://github.com" target="_blank">GitHub</a>
-        <a class="social-button" href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a class="social-button" href="https://instagram.com" target="_blank">Instagram</a>
-        <a class="social-button" href="whatsapp://send?phone=+55091989335752" target="_blank">WhatsApp</a>
+        <a class="social-button" href="https://github.com/Cerry0101" target="_blank">GitHub</a>
+        <a class="social-button" href="https://www.linkedin.com/in/marcelle-lima-a61384190/" target="_blank">LinkedIn</a>
+        <a class="social-button" href="https://www.instagram.com/mysql_0101/?next=%2F" target="_blank">Instagram</a>
+        <a class="social-button" href="https://www.facebook.com/marcela.hyuuga.1654/" target="_blank">Facebook</a>
     </div>
 
-    <!-- Adicione essa seção para o switch -->
     <div id="theme-switch-container">
         <label class="switch">
             <input type="checkbox" id="theme-switch">
@@ -36,20 +35,15 @@
         const themeSwitch = document.getElementById('theme-switch');
         const body = document.body;
 
-        // Defina o background inicial
         body.style.background = "url('assets/bg-desktop.jpg') no-repeat center center fixed";
         body.style.backgroundSize = "cover";
 
-        // Adicione o evento de mudança ao themeSwitch
         themeSwitch.addEventListener('change', () => {
-            // Alterne o background e a imagem da rodinha do botão
             if (themeSwitch.checked) {
                 body.style.background = "url('assets/bg-desktop-light.jpg') no-repeat center center fixed";
             } else {
                 body.style.background = "url('assets/bg-desktop.jpg') no-repeat center center fixed";
             }
-
-            // Atualize as propriedades background-size para cobrir toda a tela
             body.style.backgroundSize = "cover";
         });
     </script>
